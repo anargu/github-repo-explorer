@@ -3,5 +3,5 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 ENV FLASK_APP=server.py
-ENTRYPOINT ["flask"]
-CMD ["run"]
+ENTRYPOINT ["python"]
+CMD ["server.py"]
