@@ -19,6 +19,11 @@ def preprocess_theme(theme_name):
 app = Flask(__name__)
 
 
+@app.route("/", methods=["GET"])
+def hello():
+    return 'Hello, endpoint just for test'
+
+
 @app.route("/pygment", methods=["GET", "POST"])
 def pygment_code():
     filename = request.args.get("filename", "hello.py")
