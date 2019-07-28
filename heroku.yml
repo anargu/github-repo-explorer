@@ -1,5 +1,7 @@
 build:
   docker:
     web: backend/Dockerfile
+  config:
+    PORT: 5000
 # run:
 #   web: bundle exec app -C config/app.rb
