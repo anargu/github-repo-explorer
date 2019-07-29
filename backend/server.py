@@ -56,6 +56,36 @@ with open("out.html", "w") as f:
         return html_snippet
 
 
+token_url = 'https://github.com/login/oauth/access_token'
+client_id = '8212db89c5d7a74135c1'
+client_secret = 'a95f86de2fe014553b9ee79521317f6d843a041c'
+
+@app.route("/oauth-callback", methods=["POST"])
+def oauth_callback():
+    # process request
+    if 'code' in request.args:
+        #return jsonify(code=request.args.get('code'))
+        payload = {
+            'client_id': client_id,
+            'client_secret': client_secret,
+            'code': request.args['code']
+        }
+        headers = {'Accept': 'application/json'}
+        req = requests.post(token_url, params=payload, headers=headers)
+        resp = req.json()
+
+        if 'access_token' in resp:
+            login_session['access_token'] = resp['access_token']
+            return jsonify(access_token=resp['access_token'])
+            # return redirect('?token=' + resp['access_token'])
+        else:
+            return jsonify(error="Error retrieving access_token"), 404
+    else:
+        return jsonify(error="404_no_code"), 404
+    # generate token
+    return '.'
+
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
