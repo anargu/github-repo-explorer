@@ -1,4 +1,6 @@
 import os
+import sys
+import logging
 
 from flask import Flask, request, render_template, redirect
 from flask import session as login_session
@@ -124,10 +126,12 @@ def ls():
 if __name__ == '__main__':
     is_prod = os.environ.get("PROD", False) == "true"
     if not is_prod:
-        print(" * CORS enabled")
+        print(" * CORS enabled for development environment")
         cors = CORS(app, resources={r"*": {"origins": "*"}})
     else:
         print(" * CORS disabled for production environment")
+        app.logger.addHandler(logging.StreamHandler(sys.stdout))
+        app.logger.setLevel(logging.ERROR)
     port = int(os.environ.get("PORT", 5000))
     app.secret_key = "macaco"
     app.run(debug=(not is_prod), host='0.0.0.0', port=port)
