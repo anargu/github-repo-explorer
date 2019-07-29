@@ -129,4 +129,5 @@ if __name__ == '__main__':
     else:
         print(" * CORS disabled for production environment")
     port = int(os.environ.get("PORT", 5000))
+    app.secret_key = "macaco"
     app.run(debug=(not is_prod), host='0.0.0.0', port=port)
