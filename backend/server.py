@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from flask import session as login_session
 from pygments import highlight
 
