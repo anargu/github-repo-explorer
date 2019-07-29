@@ -67,7 +67,7 @@ client_id = '8212db89c5d7a74135c1'
 client_secret = 'a95f86de2fe014553b9ee79521317f6d843a041c'
 
 
-@app.route("/oauth-callback", methods=["POST"])
+@app.route("/oauth-callback", methods=["POST", "GET"])
 def oauth_callback():
     # process request
     if 'code' in request.args:
