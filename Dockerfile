@@ -2,6 +2,7 @@ FROM node:12-alpine AS frontend
 COPY ./frontend /web
 WORKDIR /web
 RUN npm install --global yarn
+RUN yarn
 RUN yarn build
 
 FROM python:3.7.4-alpine3.10
