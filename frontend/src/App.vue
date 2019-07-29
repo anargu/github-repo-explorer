@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <TreeView/>
+    <Avatar/>
   </div>
 </template>
 
 <script>
 import TreeView from './components/TreeView.vue'
+import Avatar from './components/Avatar.vue'
 
 export default {
   name: 'app',
   components: {
-    TreeView
+    TreeView, Avatar
   }
 }
 </script>
