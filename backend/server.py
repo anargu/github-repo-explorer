@@ -2,7 +2,7 @@ import os
 import sys
 import logging
 
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, make_response
 from flask import session as login_session
 from pygments import highlight
 
@@ -120,7 +120,18 @@ def ls():
             '' if payload['path'] == '' else '/' + payload['path'],
             payload['ref'])
     print(" *** github api url: ", githubApiRequestUrl)
-    return requests.get(githubApiRequestUrl).content
+    responseGithubApi = requests.get(githubApiRequestUrl)
+    response = make_response(responseGithubApi.content)
+    response.headers.set(
+        'X-RateLimit-Limit',
+        responseGithubApi.headers['X-RateLimit-Limit'])
+    response.headers.set(
+        'X-RateLimit-Remaining',
+        responseGithubApi.headers['X-RateLimit-Remaining'])
+    response.headers.set(
+        'X-RateLimit-Reset',
+        responseGithubApi.headers['X-RateLimit-Reset'])
+    return response
 
 
 if __name__ == '__main__':
