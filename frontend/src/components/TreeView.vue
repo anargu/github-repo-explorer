@@ -40,14 +40,20 @@ export default {
     }
   },
   methods: {
-    ls: function (path, opts = {}) {
+    ls: function (apiRequest, opts = {}) {
       return new Promise((resolve) => {
-        fetch(path)
+        fetch(apiRequest.url, {
+          method: 'POST',
+          body: JSON.stringify(apiRequest.payload),
+          headers:{
+            'Content-Type': 'application/json'
+          },
+          mode: 'cors'
+        })
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-          // console.log('ls -> ', data.map(d => d.type === 'dir' ? `${d.name}/` : d.name))
           if (opts.html) {
             resolve(`<ul>${
             data.map(d => {
@@ -73,10 +79,10 @@ export default {
         return
       }
       this.currentPath = { path, type }
-      const url = this.buildScrapUrl(this.owner, this.repo, path, this.ref);
+      const apiRequest = this.buildScrapUrl(this.owner, this.repo, path, this.ref);
 
       if (type === 'dir') {
-          this.ls(url)
+          this.ls(apiRequest)
           .then(lsResponse => {
             this.treeContent = lsResponse
             // this.$refs.contentTree.innerHTML = dataHtml;
@@ -90,8 +96,15 @@ export default {
       this.goDeeper(this.currentPath.path, this.currentPath.type)
     },
     buildScrapUrl: function (owner, repo, path = '', ref = 'master') {
-        const url = `https://api.github.com/repos/${owner}/${repo}/contents${path === '' ? '': '/' + path}?ref=${ref}`;
-        return url;
+        // const url = `https://api.github.com/repos/${owner}/${repo}/contents${path === '' ? '': '/' + path}?ref=${ref}`;
+        const url = process.env.NODE_ENV === 'production' ? `/ls` : 'http://localhost:5000/ls';
+        const payload = {
+          owner,
+          repo,
+          path,
+          ref
+        }
+        return { url, payload };
     }
   },
   mounted() {
@@ -99,8 +112,8 @@ export default {
     var owner = 'codemirror';
     var repo = 'CodeMirror';
     var ref = 'master';
-    const repoUrl = this.buildScrapUrl(owner, repo, '', ref);
-    this.ls(repoUrl)
+    const apiRequest = this.buildScrapUrl(owner, repo, '', ref);
+    this.ls(apiRequest)
     .then(lsResponse => {
       this.treeContent = lsResponse
       // document.getElementById('tree-view').innerHTML = dataHtml;

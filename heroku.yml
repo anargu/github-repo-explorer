@@ -1,6 +1,6 @@
 build:
   docker:
-    web: backend/Dockerfile
+    web: ./Dockerfile
   config:
     PORT: 5000
 # run:
