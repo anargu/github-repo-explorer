@@ -1,0 +1,52 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+      "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,
+        "helpers": false,
+        "regenerator": true,
+        "useESModules": false      
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      { "legacy": true }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      { "loose": true }
+    ],
+    ["prismjs", {
+      "languages": [
+        "javascript", "css", "markup", "actionscript", "apacheconf", "arduino",
+        "bash", "shell", "c", "csharp", "cs",
+        "dotnet", "cpp", "coffeescript", "coffee", "cmake",
+        "clojure", "d", "dart", "django", "jinja2",
+        "docker", "dockerfile", "elixir", "elm", "erlang",
+        "gcode", "gherkin", "git", "glsl", "go",
+        "graphql", "groovy", "haml", "handlebars", "haskell",
+        "hs", "haxe", "http", "java",
+        "javadoc", "jsdoc", "js-extras", "json",
+        "jsonp", "json5", "julia", "kotlin", "latex",
+        "tex", "context", "less", "lisp", "lua",
+        "makefile", "markdown", "md", "matlab", "nginx",
+        "perl", "php", "pug", "python", "py",
+        "r", "jsx", "tsx", "regex", "ruby",
+        "rb", "rust", "sass", "scss", "scala",
+        "stylus", "swift", "toml", "typescript", "ts",
+        "vala", "yaml", "yml"
+      ],
+      "plugins": ["line-numbers"],
+      // "theme": "dark",
+      "css": true
+    }]
+  ]
+}
