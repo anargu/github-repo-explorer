@@ -1,4 +1,4 @@
-import { LitElement } from '@polymer/lit-element'
+import { LitElement } from "@polymer/lit-element"
 import { html } from 'lit-html'
 import css from './box-card.styl'
 

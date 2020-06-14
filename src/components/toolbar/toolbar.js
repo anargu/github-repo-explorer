@@ -1,6 +1,6 @@
 import {
 	LitElement
-} from '@polymer/lit-element'
+} from "@polymer/lit-element"
 import {
 	html
 } from 'lit-html'
