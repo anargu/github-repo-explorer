@@ -62,8 +62,9 @@ class LitApp extends LitElement {
                     repo: ev.detail.repo,
                     branch: ev.detail.branch
                 }
+                this.closeFileExplorer = false
             }}
-            title="OctoRepoViewer"></m-toolbar>
+            title="OCTO REPO VIEWER"></m-toolbar>
 
         <div class="page-container">
 

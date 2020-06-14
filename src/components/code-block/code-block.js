@@ -2,7 +2,7 @@ import Prism from 'prismjs';
 // import loadLanguajes from 'prismjs/components';
 import { LitElement } from "@polymer/lit-element";
 import { html /*, render*/ } from 'lit-html'
-import prismDraculaCss from './prism-dracula.css'
+import prismSynthwave84Css from './prism-synthwave84.css'
 import axios from 'axios'
 import { until } from 'lit-html/directives/until'
 import style from './code-blocks.styl'
@@ -72,7 +72,7 @@ class CodeBlock extends LitElement {
     render() {
         return html`
         <style>${style}</style>
-        <style>${prismDraculaCss}</style>
+        <style>${prismSynthwave84Css}</style>
         <pre class="">${until(this.fetchCode(), html`Search for a repo...`)}</pre>
         `
     }

@@ -1,13 +1,15 @@
-
-import { LitElement } from '@polymer/lit-element'
-import { html } from 'lit-html'
+import {
+	LitElement
+} from '@polymer/lit-element'
+import {
+	html
+} from 'lit-html'
 import css from './toolbar.styl'
-import eyeSVG from '../../assets/eye.svg'
-import heartSVG from '../../assets/heart.svg'
-import searchSVG from '../../assets/heart.svg'
 import folderSVG from '../../assets/folder.svg'
 import svg from '../../utils/inlinesvg'
-import { saveKey } from '../../utils/localstorage'
+import {
+	saveKey, getKey
+} from '../../utils/localstorage'
 
 
 class Toolbar extends LitElement {
@@ -16,14 +18,11 @@ class Toolbar extends LitElement {
 		super()
 
 		this.title = '<no name>'
-
-		// this.user = ''
-		// this.repo = ''
-		// this.branch = ''
+		// this.personalApiToken;
 	}
 
-    static get properties () {
-        return {
+	static get properties() {
+		return {
 			title: String,
 			// user: String,
 			// repo: String,
@@ -38,17 +37,28 @@ class Toolbar extends LitElement {
 	}
 
 	sendRepoInfo() {
-		const user = this.shadowRoot.getElementById('user').value
-		const repo = this.shadowRoot.getElementById('repo').value
-		const branch = this.shadowRoot.getElementById('branch').value
-		const personalApiToken = this.shadowRoot.getElementById('personalApiToken').value
-		console.log('sendRepoInfo',
-		{
+		let repoLink = this.shadowRoot.getElementById('repolink').value
+		repoLink = repoLink.replace('https://github.com/', '')
+		repoLink = repoLink.split('/')
+		let user, repo, branch
+		if (repoLink.indexOf('tree') === -1) {
+			user = repoLink[0]
+			repo = repoLink[1]
+			branch = 'master'
+		} else {
+			user = repoLink[0]
+			repo = repoLink[1]
+			branch = repoLink[3]
+		}
+
+		console.log('sendRepoInfo', {
 			user,
 			repo,
-			branch,
+			branch
 		})
-		saveKey('personalApiToken', personalApiToken)
+		if(this.shadowRoot.getElementById('personalApiToken').value !== this.personalApiToken) {
+			saveKey('personalApiToken', this.shadowRoot.getElementById('personalApiToken').value)
+		}
 		this.dispatchEvent(
 			new CustomEvent('onLoadRepoInfo', {
 				detail: {
@@ -60,8 +70,8 @@ class Toolbar extends LitElement {
 		)
 	}
 
-    render() {
-        return html`
+	render() {
+		return html `
 		<style>
 		${css}
 		</style>
@@ -72,15 +82,34 @@ class Toolbar extends LitElement {
 				${svg(folderSVG)}
 			</span>
 			<a href="#">${this.title}</a>
-		</div>
-		<div class="input-repo">
-			<input id="user" type="text" placeholder="user"/>
-			<input id="repo" type="text" placeholder="repository"/>
-			<input id="branch" type="text" placeholder="branch"/>
-			<input id="personalApiToken" type="text" placeholder="personalApiToken"/>
-			<button class="btn-explore" @click=${(e) => { this.sendRepoInfo() }}>explore</button>
+
+			<iframe id="github-star-link"
+				src="https://ghbtns.com/github-btn.html?user=anargu&repo=octo-repo-viewer&type=star&count=true"
+				frameborder="0"
+				scrolling="0"
+				width="150"
+				height="20"
+				title="GitHub"></iframe>
+
+			<div class="input-repo">
+				<form id="formRepoSearch">
+					<input id="repolink" type="text" placeholder="REPO URL"/>
+					<input id="personalApiToken" type="text" placeholder="personalApiToken"/>
+					<button class="btn-explore" type="submit">EXPLORE &#9654;</button>
+				</form>				
+			</div>
 		</div>
 		`
+	}
+
+	firstUpdated(props) {
+		this.personalApiToken = getKey('personalApiToken')
+		this.shadowRoot.getElementById('personalApiToken').value = this.personalApiToken
+		this.shadowRoot.getElementById('formRepoSearch').addEventListener('submit', (ev) => {
+			ev.preventDefault()
+			this.sendRepoInfo()
+			return false
+		})
 	}
 }
 
