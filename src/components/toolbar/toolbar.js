@@ -76,27 +76,29 @@ class Toolbar extends LitElement {
 		${css}
 		</style>
 		<div class="toolbar-content">
-			<span
-				@click=${() => { this.openFileExplorer() }}
-				class="arrowright">
-				${svg(folderSVG)}
-			</span>
-			<a href="#">${this.title}</a>
+			<div class="toolbar-inner-content">
+				<span
+					@click=${() => { this.openFileExplorer() }}
+					class="arrowright">
+					${svg(folderSVG)}
+				</span>
+				<a href="#">${this.title}</a>
 
-			<iframe id="github-star-link"
-				src="https://ghbtns.com/github-btn.html?user=anargu&repo=octo-repo-viewer&type=star&count=true"
-				frameborder="0"
-				scrolling="0"
-				width="150"
-				height="20"
-				title="GitHub"></iframe>
+				<iframe id="github-star-link"
+					src="https://ghbtns.com/github-btn.html?user=anargu&repo=octo-repo-viewer&type=star&count=true"
+					frameborder="0"
+					scrolling="0"
+					width="150"
+					height="20"
+					title="GitHub"></iframe>
 
-			<div class="input-repo">
-				<form id="formRepoSearch">
-					<input id="repolink" type="text" placeholder="REPO URL"/>
-					<input id="personalApiToken" type="text" placeholder="personalApiToken"/>
-					<button class="btn-explore" type="submit">EXPLORE &#9654;</button>
-				</form>				
+				<div class="input-repo">
+					<form id="formRepoSearch">
+						<input id="repolink" type="text" placeholder="REPO URL"/>
+						<input id="personalApiToken" type="text" placeholder="personalApiToken"/>
+						<button class="btn-explore" type="submit">EXPLORE &#9654;</button>
+					</form>				
+				</div>
 			</div>
 		</div>
 		`

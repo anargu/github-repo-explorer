@@ -31,7 +31,7 @@ class LitApp extends LitElement {
     constructor() {
         super()
         this.codeParams = null
-        this.closeFileExplorer = false
+        this.closeFileExplorer = true
         this.repoParams = {}
     }
 
