@@ -11,6 +11,7 @@ const utils = require('./webpack.utils')
 const ENV = utils.ENV
 const INDEX_TEMPLATE = path.resolve(__dirname, 'src/index.html')
 const OUTPUT_PATH = ENV === 'production' ? path.resolve('dist') : path.resolve('src') // resolve('dist')
+const deploy2Github = process.env.DEPLOY_GITHUB === 'deploy-github';
 
 const webcomponentsjs = './node_modules/@webcomponents/webcomponentsjs'
 
@@ -107,7 +108,8 @@ const commonConfig = merge([
         entry: path.resolve(__dirname, 'src/lit-app.js'),
         output: {
             path: path.resolve(__dirname, OUTPUT_PATH),
-            filename: '[name].bundle.[contenthash].js'
+            filename: '[name].bundle.[contenthash].js',
+            publicPath: deploy2Github ? '/regosh-landing/' : ''
         },
         module: {
             rules: [...utils.rules]
