@@ -109,7 +109,7 @@ const commonConfig = merge([
         output: {
             path: path.resolve(__dirname, OUTPUT_PATH),
             filename: '[name].bundle.[contenthash].js',
-            publicPath: deploy2Github ? '/regosh-landing/' : ''
+            publicPath: deploy2Github ? '/octo-repo-viewer/' : ''
         },
         module: {
             rules: [...utils.rules]
