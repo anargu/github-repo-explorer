@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.86871657665d74674b25a484ee8b20a9.js"
+  "/regosh-landing/precache-manifest.cbd50fb426824f6f22041d234732870b.js"
 );
 
 workbox.skipWaiting();
