@@ -4,6 +4,12 @@ import axios from 'axios'
 import { until } from 'lit-html/directives/until'
 import style from './file-explorer.styl'
 import { getKey } from '../../utils/localstorage'
+import folderSVG from '../../assets/folder.svg'
+import fileTextSVG from '../../assets/file-text.svg'
+import githubSVG from '../../assets/github.svg'
+import svg from '../../utils/inlinesvg'
+
+
 
 class FileExplorer extends LitElement {
 
@@ -36,10 +42,13 @@ class FileExplorer extends LitElement {
     renderTreeList() {
         if(this.treepath !== '') {
             const uplevel = this.treepath.split('/').slice(0,-1).join('/')
-            this.threeLinks.unshift({path: uplevel, name: '..'})
+            this.threeLinks.unshift({path: uplevel, name: '..', type: 'dir'})
         }
         const li = this.threeLinks.map(
-            (tl) => html`<li @click=${(e) => this.onTreeLinkClick(tl)}>${tl.name}</li>`)
+            (tl) => html`<li @click=${(e) => this.onTreeLinkClick(tl)}>
+                <span class="item-icon">${tl.type === 'dir' ? svg(folderSVG) : svg(fileTextSVG)}</span>
+                <span class="item-name"> ${tl.name} </span>
+                </li>`)
         return html`
         <ul>
             ${li}
@@ -65,7 +74,8 @@ class FileExplorer extends LitElement {
         <style>${style}</style>
         <div class="close-icon"><span @click=${(e) => this.onCloseClick()}>&times;</span></div>
         <div class="title">
-        ${this.user}/${this.repo}
+            <span class="repo-icon">${svg(githubSVG)}</span>
+            <div class="repo-name">${this.user}/${this.repo}</div>
         </div>
         ${until(this.fetchTree(), html`<p>loading...<p>`)}
         `
@@ -86,14 +96,19 @@ class FileExplorer extends LitElement {
             if(!Array.isArray(response.data)) {
                 // it's tree view
                 this.isFile = true
-                // this.dispatchEvent(
-                //     new CustomEvent(
-                //         'onFileSelected',
-                //         { detail: { filepath: response.data.path, user: this.user, repo: this.repo, branch: this.branch }}))
                 return this.renderTreeList(this.threeLinks)        
             } else {
                 this.isFile = false
             }
+            response.data.sort((a,b) => {
+                if(a.type === 'dir' && b.type === 'file') {
+                    return -1
+                }
+                if(a.type === 'file' && b.type === 'dir') {
+                    return 1
+                }
+                return 0
+            })
             this.threeLinks = response.data.map((t) => ({ name: t.name, path: t.path, type: t.type}))
             return this.renderTreeList(this.threeLinks)
         } catch (error) {
