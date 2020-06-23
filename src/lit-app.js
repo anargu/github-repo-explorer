@@ -64,10 +64,9 @@ class LitApp extends LitElement {
                 }
                 this.closeFileExplorer = false
             }}
-            title="OCTO REPO VIEWER"></m-toolbar>
+            title="Github Repo Explorer"></m-toolbar>
 
         <div class="page-container">
-
             <file-explorer
                 .user=${this.repoParams.user}
                 .repo=${this.repoParams.repo}
