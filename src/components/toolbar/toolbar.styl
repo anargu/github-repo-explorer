@@ -40,6 +40,7 @@
     float: right;
     padding: 0 16px;
 
+.personal-token-input input 
 .input-repo input 
     background none
     border 1px solid color3
@@ -49,22 +50,39 @@
     margin 0 4px
     color color4
     font-family: primaryFont
+
+.personal-token-input
+    padding 12px 0 18px 0
+    display: flex;
+.personal-token-input input 
+    margin 0
+    flex 1
+
 #repolink
     width 192px
 #personalApiToken
-    color gray
-    width 92px
-.input-repo button
-    background: color3
-    color color1
-    border none
-    border-radius: 4px
-    cursor: pointer
-    font-weight: bold
-    padding: 10px 16px
-    font-size: 12px
-    outline: none
+    width 100%
+
 #github-star-link
     display: inline-block
     position: relative
     top: 5px
+.rocket-icon--container
+    text-align: center
+    padding: 32px 0 24px 0
+.rocket-icon
+    font-size 64px
+mwc-dialog
+    font-family: primaryFont
+    --mdc-theme-surface: color1
+mwc-dialog div
+    color lightTextColor
+mwc-dialog div p
+    font-size 14px
+
+
+.support-disclaimer
+.support-disclaimer p
+    font-size 12px
+    color gray
+    line-height: 18px
