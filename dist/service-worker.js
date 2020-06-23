@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/octo-repo-viewer/precache-manifest.8ad5402cfcbd0a4a91f182e20cdbf2bb.js"
+  "/octo-repo-viewer/precache-manifest.28f2cbaf98d4f5061cce567a34b4e1a7.js"
 );
 
 workbox.skipWaiting();
