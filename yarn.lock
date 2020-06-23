@@ -645,6 +645,156 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@material/animation@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/animation/-/animation-7.0.0-canary.d92d8c93e.0.tgz#7aa9f15b710c478c84ac31e239f0c3d85192fbc1"
+  integrity sha1-eqnxW3EMR4yErDHiOfDD2FGS+8E=
+  dependencies:
+    tslib "^1.9.3"
+
+"@material/base@7.0.0-canary.d92d8c93e.0", "@material/base@=7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/base/-/base-7.0.0-canary.d92d8c93e.0.tgz#e111a21bc5ae1a9c4cb6ae37d09edd791aaadcc1"
+  integrity sha1-4RGiG8WuGpxMtq430J7deRqq3ME=
+  dependencies:
+    tslib "^1.9.3"
+
+"@material/button@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/button/-/button-7.0.0-canary.d92d8c93e.0.tgz#14fa7bea4a082f43839593c0883addb6f3fdab15"
+  integrity sha1-FPp76koIL0ODlZPAiDrdtvP9qxU=
+  dependencies:
+    "@material/density" "7.0.0-canary.d92d8c93e.0"
+    "@material/elevation" "7.0.0-canary.d92d8c93e.0"
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/ripple" "7.0.0-canary.d92d8c93e.0"
+    "@material/rtl" "7.0.0-canary.d92d8c93e.0"
+    "@material/shape" "7.0.0-canary.d92d8c93e.0"
+    "@material/theme" "7.0.0-canary.d92d8c93e.0"
+    "@material/touch-target" "7.0.0-canary.d92d8c93e.0"
+    "@material/typography" "7.0.0-canary.d92d8c93e.0"
+
+"@material/density@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/density/-/density-7.0.0-canary.d92d8c93e.0.tgz#a7a3b0a4fdb4ce92487611a18af4bf51b8f7b09f"
+  integrity sha1-p6OwpP20zpJIdhGhivS/Ubj3sJ8=
+
+"@material/dialog@=7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/dialog/-/dialog-7.0.0-canary.d92d8c93e.0.tgz#d11440345d57ed7f86eb2186c0e9cb72ba8938ed"
+  integrity sha1-0RRANF1X7X+G6yGGwOnLcrqJOO0=
+  dependencies:
+    "@material/animation" "7.0.0-canary.d92d8c93e.0"
+    "@material/base" "7.0.0-canary.d92d8c93e.0"
+    "@material/button" "7.0.0-canary.d92d8c93e.0"
+    "@material/dom" "7.0.0-canary.d92d8c93e.0"
+    "@material/elevation" "7.0.0-canary.d92d8c93e.0"
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/ripple" "7.0.0-canary.d92d8c93e.0"
+    "@material/rtl" "7.0.0-canary.d92d8c93e.0"
+    "@material/shape" "7.0.0-canary.d92d8c93e.0"
+    "@material/theme" "7.0.0-canary.d92d8c93e.0"
+    "@material/touch-target" "7.0.0-canary.d92d8c93e.0"
+    "@material/typography" "7.0.0-canary.d92d8c93e.0"
+    tslib "^1.9.3"
+
+"@material/dom@7.0.0-canary.d92d8c93e.0", "@material/dom@=7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/dom/-/dom-7.0.0-canary.d92d8c93e.0.tgz#079c9d4e0a5e926acc26b22277bca94750122e9f"
+  integrity sha1-B5ydTgpekmrMJrIid7ypR1ASLp8=
+  dependencies:
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    tslib "^1.9.3"
+
+"@material/elevation@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/elevation/-/elevation-7.0.0-canary.d92d8c93e.0.tgz#9403d7abf0019b2864c672e7d9de6409f2c48670"
+  integrity sha1-lAPXq/ABmyhkxnLn2d5kCfLEhnA=
+  dependencies:
+    "@material/animation" "7.0.0-canary.d92d8c93e.0"
+    "@material/base" "7.0.0-canary.d92d8c93e.0"
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/theme" "7.0.0-canary.d92d8c93e.0"
+
+"@material/feature-targeting@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/feature-targeting/-/feature-targeting-7.0.0-canary.d92d8c93e.0.tgz#7fd210bebaf260ce8b3db8a27100b9716d807bab"
+  integrity sha1-f9IQvrryYM6LPbiicQC5cW2Ae6s=
+
+"@material/mwc-base@^0.15.0":
+  version "0.15.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/mwc-base/-/mwc-base-0.15.0.tgz#ddc8271c0f8b06c9098436ff8a9892ed0dcab5dc"
+  integrity sha1-3cgnHA+LBskJhDb/ipiS7Q3Ktdw=
+  dependencies:
+    "@material/base" "=7.0.0-canary.d92d8c93e.0"
+    "@material/dom" "=7.0.0-canary.d92d8c93e.0"
+    "@material/ripple" "=7.0.0-canary.d92d8c93e.0"
+    lit-element "^2.3.0"
+    tslib "^1.10.0"
+
+"@material/mwc-dialog@^0.15.0":
+  version "0.15.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/mwc-dialog/-/mwc-dialog-0.15.0.tgz#1b5266123ee4eac2274d9410ef7eadb354d27008"
+  integrity sha1-G1JmEj7k6sInTZQQ736ts1TScAg=
+  dependencies:
+    "@material/dialog" "=7.0.0-canary.d92d8c93e.0"
+    "@material/dom" "=7.0.0-canary.d92d8c93e.0"
+    "@material/mwc-base" "^0.15.0"
+    "@material/touch-target" "=7.0.0-canary.d92d8c93e.0"
+    blocking-elements "^0.1.0"
+    lit-element "^2.3.0"
+    lit-html "^1.1.2"
+    tslib "^1.10.0"
+    wicg-inert "^3.0.0"
+
+"@material/ripple@7.0.0-canary.d92d8c93e.0", "@material/ripple@=7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/ripple/-/ripple-7.0.0-canary.d92d8c93e.0.tgz#f617d942cecce3f219a15e46d0e540bde355e5f5"
+  integrity sha1-9hfZQs7M4/IZoV5G0OVAveNV5fU=
+  dependencies:
+    "@material/animation" "7.0.0-canary.d92d8c93e.0"
+    "@material/base" "7.0.0-canary.d92d8c93e.0"
+    "@material/dom" "7.0.0-canary.d92d8c93e.0"
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/theme" "7.0.0-canary.d92d8c93e.0"
+    tslib "^1.9.3"
+
+"@material/rtl@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/rtl/-/rtl-7.0.0-canary.d92d8c93e.0.tgz#23b16cee381f52d31a25a424bbb921a3b23ba266"
+  integrity sha1-I7Fs7jgfUtMaJaQku7kho7I7omY=
+
+"@material/shape@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/shape/-/shape-7.0.0-canary.d92d8c93e.0.tgz#85f3b60118dec525260dca048ec351520bb14b0f"
+  integrity sha1-hfO2ARjexSUmDcoEjsNRUguxSw8=
+  dependencies:
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/rtl" "7.0.0-canary.d92d8c93e.0"
+
+"@material/theme@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/theme/-/theme-7.0.0-canary.d92d8c93e.0.tgz#24da57015cba9d4759dade806a0ce92e10bf937a"
+  integrity sha1-JNpXAVy6nUdZ2t6AagzpLhC/k3o=
+  dependencies:
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+
+"@material/touch-target@7.0.0-canary.d92d8c93e.0", "@material/touch-target@=7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/touch-target/-/touch-target-7.0.0-canary.d92d8c93e.0.tgz#90c568ae9fcf083ddeb00dc1930ea722c39177b6"
+  integrity sha1-kMVorp/PCD3esA3Bkw6nIsORd7Y=
+  dependencies:
+    "@material/base" "7.0.0-canary.d92d8c93e.0"
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+
+"@material/typography@7.0.0-canary.d92d8c93e.0":
+  version "7.0.0-canary.d92d8c93e.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/@material/typography/-/typography-7.0.0-canary.d92d8c93e.0.tgz#5523b743ed8a86156627264f2546f32c000538bd"
+  integrity sha1-VSO3Q+2KhhVmJyZPJUbzLAAFOL0=
+  dependencies:
+    "@material/feature-targeting" "7.0.0-canary.d92d8c93e.0"
+    "@material/theme" "7.0.0-canary.d92d8c93e.0"
+
 "@polymer/lit-element@^0.6.2":
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.2.tgz#589f2fa19e84d23c1debb2c329cbab758ae30581"
@@ -1185,6 +1335,11 @@ binary-extensions@^1.0.0:
 blob@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
+
+blocking-elements@^0.1.0:
+  version "0.1.1"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/blocking-elements/-/blocking-elements-0.1.1.tgz#6acddbe2714a029a1774e9219bcf38736e07ded3"
+  integrity sha1-as3b4nFKApoXdOkhm884c24H3tM=
 
 bluebird@^3.3.0, bluebird@^3.5.1:
   version "3.5.2"
@@ -3512,9 +3667,21 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+lit-element@^2.3.0:
+  version "2.3.1"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lit-element/-/lit-element-2.3.1.tgz#73343b978fa1e73d60526c6bb6ad60f53a16c343"
+  integrity sha1-czQ7l4+h5z1gUmxrtq1g9ToWw0M=
+  dependencies:
+    lit-html "^1.1.1"
+
 lit-html@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.12.0.tgz#d994420fda74744f9d4a79401b086de929643e6a"
+
+lit-html@^1.1.1, lit-html@^1.1.2:
+  version "1.2.1"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lit-html/-/lit-html-1.2.1.tgz#1fb933dc1e2ddc095f60b8086277d4fcd9d62cc8"
+  integrity sha1-H7kz3B4t3AlfYLgIYnfU/NnWLMg=
 
 loader-runner@^2.3.0:
   version "2.3.1"
@@ -5600,6 +5767,11 @@ tryer@^1.0.0:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
+tslib@^1.10.0, tslib@^1.9.3:
+  version "1.13.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
+  integrity sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
+
 tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
@@ -6001,6 +6173,11 @@ which@^1.2.1, which@^1.2.9:
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   dependencies:
     isexe "^2.0.0"
+
+wicg-inert@^3.0.0:
+  version "3.0.3"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/wicg-inert/-/wicg-inert-3.0.3.tgz#7d05eaed64176887ee4c66fc0c4d6fe4b38ccce5"
+  integrity sha1-fQXq7WQXaIfuTGb8DE1v5LOMzOU=
 
 wide-align@^1.1.0:
   version "1.1.3"
