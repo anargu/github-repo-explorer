@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "6a2251f7f24b7ab1bef2",
-    "url": "github-repo-explorer/main.bundle.017ee38f111670d95162.js"
+    "revision": "5fbded8b8550e509c707",
+    "url": "github-repo-explorer/main.bundle.6dc4f4cc09fc4b1639aa.js"
   },
   {
     "revision": "3a6fd97ab38fe3be974d",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "github-repo-explorer/vendor/custom-elements-es5-adapter.js"
   },
   {
-    "revision": "d42dd0732b85d5efa9e1660a1747b05c",
-    "url": "github-repo-explorer/vendor/webcomponents-loader.js"
-  },
-  {
     "revision": "0f9a5cf89f1d4757a6a4945a329e1fc0",
     "url": "github-repo-explorer/vendor/bundles/webcomponents-ce.js"
+  },
+  {
+    "revision": "d42dd0732b85d5efa9e1660a1747b05c",
+    "url": "github-repo-explorer/vendor/webcomponents-loader.js"
   },
   {
     "revision": "893102e1869adc5bce0a94feb6f74249",
@@ -60,32 +60,32 @@ self.__precacheManifest = [
     "url": "github-repo-explorer/assets/heart.svg"
   },
   {
-    "revision": "db891223b9fc9773886d0d2b9e30b103",
-    "url": "github-repo-explorer/assets/manifest/android-icon-36x36.png"
-  },
-  {
-    "revision": "809365f9cdb00278225df88697512ac2",
-    "url": "github-repo-explorer/assets/manifest/android-icon-48x48.png"
-  },
-  {
     "revision": "a4ddfb1091333098737aebbb78cf6e9c",
     "url": "github-repo-explorer/assets/manifest/android-icon-192x192.png"
   },
   {
-    "revision": "07ed692eb45b02ffec7e956044c9b152",
-    "url": "github-repo-explorer/assets/manifest/android-icon-72x72.png"
-  },
-  {
-    "revision": "d9aa581165c22f18ce2813d591fda5a9",
-    "url": "github-repo-explorer/assets/manifest/apple-icon-120x120.png"
+    "revision": "db891223b9fc9773886d0d2b9e30b103",
+    "url": "github-repo-explorer/assets/manifest/android-icon-36x36.png"
   },
   {
     "revision": "ba15cd27984421a8f5408f4a24eaec56",
     "url": "github-repo-explorer/assets/manifest/android-icon-96x96.png"
   },
   {
+    "revision": "07ed692eb45b02ffec7e956044c9b152",
+    "url": "github-repo-explorer/assets/manifest/android-icon-72x72.png"
+  },
+  {
+    "revision": "809365f9cdb00278225df88697512ac2",
+    "url": "github-repo-explorer/assets/manifest/android-icon-48x48.png"
+  },
+  {
     "revision": "7d841725b87299c0a7469200e971390a",
     "url": "github-repo-explorer/assets/manifest/apple-icon-114x114.png"
+  },
+  {
+    "revision": "d9aa581165c22f18ce2813d591fda5a9",
+    "url": "github-repo-explorer/assets/manifest/apple-icon-120x120.png"
   },
   {
     "revision": "195d1b3c4a19ddbfe82d4076e3480d2d",
@@ -104,32 +104,36 @@ self.__precacheManifest = [
     "url": "github-repo-explorer/assets/manifest/apple-icon-57x57.png"
   },
   {
-    "revision": "07ed692eb45b02ffec7e956044c9b152",
-    "url": "github-repo-explorer/assets/manifest/apple-icon-72x72.png"
-  },
-  {
     "revision": "bd91af0c7048a76e529f10cbf2d4460a",
     "url": "github-repo-explorer/assets/manifest/apple-icon-60x60.png"
-  },
-  {
-    "revision": "c0564a2dcab98e772131d93c0106a12d",
-    "url": "github-repo-explorer/assets/manifest/apple-icon-precomposed.png"
   },
   {
     "revision": "dbec4bd7ff4d97aceb91da86e7cd2af6",
     "url": "github-repo-explorer/assets/manifest/apple-icon-76x76.png"
   },
   {
+    "revision": "07ed692eb45b02ffec7e956044c9b152",
+    "url": "github-repo-explorer/assets/manifest/apple-icon-72x72.png"
+  },
+  {
     "revision": "c0564a2dcab98e772131d93c0106a12d",
     "url": "github-repo-explorer/assets/manifest/apple-icon.png"
+  },
+  {
+    "revision": "c0564a2dcab98e772131d93c0106a12d",
+    "url": "github-repo-explorer/assets/manifest/apple-icon-precomposed.png"
+  },
+  {
+    "revision": "33f481e5872cc0d98110c165f3ffb1c1",
+    "url": "github-repo-explorer/assets/manifest/favicon-16x16.png"
   },
   {
     "revision": "653d077300a12f09a69caeea7a8947f8",
     "url": "github-repo-explorer/assets/manifest/browserconfig.xml"
   },
   {
-    "revision": "33f481e5872cc0d98110c165f3ffb1c1",
-    "url": "github-repo-explorer/assets/manifest/favicon-16x16.png"
+    "revision": "477cfaca9467544d83c4e32857bf014f",
+    "url": "github-repo-explorer/assets/manifest/favicon.ico"
   },
   {
     "revision": "ba15cd27984421a8f5408f4a24eaec56",
@@ -148,12 +152,12 @@ self.__precacheManifest = [
     "url": "github-repo-explorer/assets/manifest/ms-icon-144x144.png"
   },
   {
-    "revision": "477cfaca9467544d83c4e32857bf014f",
-    "url": "github-repo-explorer/assets/manifest/favicon.ico"
-  },
-  {
     "revision": "23556e675f034e0ed06c96df6e23c33f",
     "url": "github-repo-explorer/assets/manifest/ms-icon-150x150.png"
+  },
+  {
+    "revision": "29ca796246c469bd391935ef0c695efe",
+    "url": "github-repo-explorer/assets/manifest/ms-icon-310x310.png"
   },
   {
     "revision": "704b1bfbb64ace2fcd5a5243b6ee729c",
@@ -164,11 +168,7 @@ self.__precacheManifest = [
     "url": "github-repo-explorer/assets/roboto-mono-v5-latin-regular.woff2"
   },
   {
-    "revision": "29ca796246c469bd391935ef0c695efe",
-    "url": "github-repo-explorer/assets/manifest/ms-icon-310x310.png"
-  },
-  {
-    "revision": "36aaf8ce1b7338feaf654d9083b31bbc",
+    "revision": "8cae918aaae6d53c10555a963003ba15",
     "url": "github-repo-explorer/index.html"
   }
 ];
